@@ -1,0 +1,364 @@
+{
+	"version": 0,
+	"dependencies": [
+		{
+			"importpath": "github.com/cloudfoundry/bosh-cli/director",
+			"repository": "https://github.com/cloudfoundry/bosh-cli",
+			"vcs": "git",
+			"revision": "ef5579244fd51474e518ae150b77fa6b5788c15b",
+			"branch": "master",
+			"path": "/director",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cloudfoundry/bosh-cli/logger",
+			"repository": "https://github.com/cloudfoundry/bosh-cli",
+			"vcs": "git",
+			"revision": "ef5579244fd51474e518ae150b77fa6b5788c15b",
+			"branch": "master",
+			"path": "/logger",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cloudfoundry/bosh-cli/uaa",
+			"repository": "https://github.com/cloudfoundry/bosh-cli",
+			"vcs": "git",
+			"revision": "ef5579244fd51474e518ae150b77fa6b5788c15b",
+			"branch": "master",
+			"path": "/uaa",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cloudfoundry/bosh-cli/ui",
+			"repository": "https://github.com/cloudfoundry/bosh-cli",
+			"vcs": "git",
+			"revision": "ef5579244fd51474e518ae150b77fa6b5788c15b",
+			"branch": "master",
+			"path": "ui",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cloudfoundry/bosh-cli/vendor/github.com/bmatcuk/doublestar",
+			"repository": "https://github.com/cloudfoundry/bosh-cli",
+			"vcs": "git",
+			"revision": "ef5579244fd51474e518ae150b77fa6b5788c15b",
+			"branch": "master",
+			"path": "vendor/github.com/bmatcuk/doublestar",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cloudfoundry/bosh-cli/vendor/github.com/charlievieth/fs",
+			"repository": "https://github.com/cloudfoundry/bosh-cli",
+			"vcs": "git",
+			"revision": "ef5579244fd51474e518ae150b77fa6b5788c15b",
+			"branch": "master",
+			"path": "vendor/github.com/charlievieth/fs",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cloudfoundry/bosh-cli/vendor/github.com/cheggaaa/pb",
+			"repository": "https://github.com/cloudfoundry/bosh-cli",
+			"vcs": "git",
+			"revision": "ef5579244fd51474e518ae150b77fa6b5788c15b",
+			"branch": "master",
+			"path": "vendor/github.com/cheggaaa/pb",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cloudfoundry/bosh-cli/vendor/github.com/cloudfoundry/bosh-utils/errors",
+			"repository": "https://github.com/cloudfoundry/bosh-cli",
+			"vcs": "git",
+			"revision": "ef5579244fd51474e518ae150b77fa6b5788c15b",
+			"branch": "master",
+			"path": "vendor/github.com/cloudfoundry/bosh-utils/errors",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cloudfoundry/bosh-cli/vendor/github.com/cloudfoundry/bosh-utils/http",
+			"repository": "https://github.com/cloudfoundry/bosh-cli",
+			"vcs": "git",
+			"revision": "ef5579244fd51474e518ae150b77fa6b5788c15b",
+			"branch": "master",
+			"path": "vendor/github.com/cloudfoundry/bosh-utils/http",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cloudfoundry/bosh-cli/vendor/github.com/cloudfoundry/bosh-utils/httpclient",
+			"repository": "https://github.com/cloudfoundry/bosh-cli",
+			"vcs": "git",
+			"revision": "ef5579244fd51474e518ae150b77fa6b5788c15b",
+			"branch": "master",
+			"path": "vendor/github.com/cloudfoundry/bosh-utils/httpclient",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cloudfoundry/bosh-cli/vendor/github.com/cloudfoundry/bosh-utils/logger",
+			"repository": "https://github.com/cloudfoundry/bosh-cli",
+			"vcs": "git",
+			"revision": "ef5579244fd51474e518ae150b77fa6b5788c15b",
+			"branch": "master",
+			"path": "vendor/github.com/cloudfoundry/bosh-utils/logger",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cloudfoundry/bosh-cli/vendor/github.com/cloudfoundry/bosh-utils/retrystrategy",
+			"repository": "https://github.com/cloudfoundry/bosh-cli",
+			"vcs": "git",
+			"revision": "ef5579244fd51474e518ae150b77fa6b5788c15b",
+			"branch": "master",
+			"path": "vendor/github.com/cloudfoundry/bosh-utils/retrystrategy",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cloudfoundry/bosh-cli/vendor/github.com/cloudfoundry/bosh-utils/system",
+			"repository": "https://github.com/cloudfoundry/bosh-cli",
+			"vcs": "git",
+			"revision": "ef5579244fd51474e518ae150b77fa6b5788c15b",
+			"branch": "master",
+			"path": "vendor/github.com/cloudfoundry/bosh-utils/system",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cloudfoundry/bosh-cli/vendor/github.com/cloudfoundry/bosh-utils/uuid",
+			"repository": "https://github.com/cloudfoundry/bosh-cli",
+			"vcs": "git",
+			"revision": "ef5579244fd51474e518ae150b77fa6b5788c15b",
+			"branch": "master",
+			"path": "vendor/github.com/cloudfoundry/bosh-utils/uuid",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cloudfoundry/bosh-cli/vendor/github.com/cppforlife/go-patch/patch",
+			"repository": "https://github.com/cloudfoundry/bosh-cli",
+			"vcs": "git",
+			"revision": "ef5579244fd51474e518ae150b77fa6b5788c15b",
+			"branch": "master",
+			"path": "vendor/github.com/cppforlife/go-patch/patch",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cloudfoundry/bosh-cli/vendor/github.com/cppforlife/go-semi-semantic/version",
+			"repository": "https://github.com/cloudfoundry/bosh-cli",
+			"vcs": "git",
+			"revision": "ef5579244fd51474e518ae150b77fa6b5788c15b",
+			"branch": "master",
+			"path": "vendor/github.com/cppforlife/go-semi-semantic/version",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cloudfoundry/bosh-cli/vendor/github.com/dustin/go-humanize",
+			"repository": "https://github.com/cloudfoundry/bosh-cli",
+			"vcs": "git",
+			"revision": "ef5579244fd51474e518ae150b77fa6b5788c15b",
+			"branch": "master",
+			"path": "vendor/github.com/dustin/go-humanize",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cloudfoundry/bosh-cli/vendor/github.com/fatih/color",
+			"repository": "https://github.com/cloudfoundry/bosh-cli",
+			"vcs": "git",
+			"revision": "ef5579244fd51474e518ae150b77fa6b5788c15b",
+			"branch": "master",
+			"path": "vendor/github.com/fatih/color",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cloudfoundry/bosh-cli/vendor/github.com/mattn/go-colorable",
+			"repository": "https://github.com/cloudfoundry/bosh-cli",
+			"vcs": "git",
+			"revision": "ef5579244fd51474e518ae150b77fa6b5788c15b",
+			"branch": "master",
+			"path": "vendor/github.com/mattn/go-colorable",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cloudfoundry/bosh-cli/vendor/github.com/mattn/go-isatty",
+			"repository": "https://github.com/cloudfoundry/bosh-cli",
+			"vcs": "git",
+			"revision": "ef5579244fd51474e518ae150b77fa6b5788c15b",
+			"branch": "master",
+			"path": "vendor/github.com/mattn/go-isatty",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cloudfoundry/bosh-cli/vendor/github.com/nu7hatch/gouuid",
+			"repository": "https://github.com/cloudfoundry/bosh-cli",
+			"vcs": "git",
+			"revision": "ef5579244fd51474e518ae150b77fa6b5788c15b",
+			"branch": "master",
+			"path": "vendor/github.com/nu7hatch/gouuid",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cloudfoundry/bosh-cli/vendor/github.com/onsi/gomega/types",
+			"repository": "https://github.com/cloudfoundry/bosh-cli",
+			"vcs": "git",
+			"revision": "ef5579244fd51474e518ae150b77fa6b5788c15b",
+			"branch": "master",
+			"path": "vendor/github.com/onsi/gomega/types",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cloudfoundry/bosh-cli/vendor/github.com/pivotal-golang/clock",
+			"repository": "https://github.com/cloudfoundry/bosh-cli",
+			"vcs": "git",
+			"revision": "ef5579244fd51474e518ae150b77fa6b5788c15b",
+			"branch": "master",
+			"path": "vendor/github.com/pivotal-golang/clock",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cloudfoundry/bosh-cli/vendor/github.com/vito/go-interact/interact",
+			"repository": "https://github.com/cloudfoundry/bosh-cli",
+			"vcs": "git",
+			"revision": "ef5579244fd51474e518ae150b77fa6b5788c15b",
+			"branch": "master",
+			"path": "vendor/github.com/vito/go-interact/interact",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cloudfoundry/bosh-cli/vendor/golang.org/x/crypto/ssh",
+			"repository": "https://github.com/cloudfoundry/bosh-cli",
+			"vcs": "git",
+			"revision": "ef5579244fd51474e518ae150b77fa6b5788c15b",
+			"branch": "master",
+			"path": "vendor/golang.org/x/crypto/ssh",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cloudfoundry/bosh-cli/vendor/golang.org/x/net/proxy",
+			"repository": "https://github.com/cloudfoundry/bosh-cli",
+			"vcs": "git",
+			"revision": "ef5579244fd51474e518ae150b77fa6b5788c15b",
+			"branch": "master",
+			"path": "vendor/golang.org/x/net/proxy",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cloudfoundry/bosh-cli/vendor/gopkg.in/yaml.v2",
+			"repository": "https://github.com/cloudfoundry/bosh-cli",
+			"vcs": "git",
+			"revision": "ef5579244fd51474e518ae150b77fa6b5788c15b",
+			"branch": "master",
+			"path": "vendor/gopkg.in/yaml.v2",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cloudfoundry/bosh-utils/errors",
+			"repository": "https://github.com/cloudfoundry/bosh-utils",
+			"vcs": "git",
+			"revision": "833257efc00aee289992e3c49551121850208c36",
+			"branch": "master",
+			"path": "errors",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cloudfoundry/bosh-utils/http",
+			"repository": "https://github.com/cloudfoundry/bosh-utils",
+			"vcs": "git",
+			"revision": "833257efc00aee289992e3c49551121850208c36",
+			"branch": "master",
+			"path": "/http",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cloudfoundry/bosh-utils/httpclient",
+			"repository": "https://github.com/cloudfoundry/bosh-utils",
+			"vcs": "git",
+			"revision": "833257efc00aee289992e3c49551121850208c36",
+			"branch": "master",
+			"path": "/httpclient",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cloudfoundry/bosh-utils/logger",
+			"repository": "https://github.com/cloudfoundry/bosh-utils",
+			"vcs": "git",
+			"revision": "833257efc00aee289992e3c49551121850208c36",
+			"branch": "master",
+			"path": "/logger",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cloudfoundry/bosh-utils/retrystrategy",
+			"repository": "https://github.com/cloudfoundry/bosh-utils",
+			"vcs": "git",
+			"revision": "833257efc00aee289992e3c49551121850208c36",
+			"branch": "master",
+			"path": "retrystrategy",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cloudfoundry/bosh-utils/system",
+			"repository": "https://github.com/cloudfoundry/bosh-utils",
+			"vcs": "git",
+			"revision": "833257efc00aee289992e3c49551121850208c36",
+			"branch": "master",
+			"path": "system",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cloudfoundry/bosh-utils/uuid",
+			"repository": "https://github.com/cloudfoundry/bosh-utils",
+			"vcs": "git",
+			"revision": "833257efc00aee289992e3c49551121850208c36",
+			"branch": "master",
+			"path": "uuid",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cloudfoundry/bosh-utils/vendor/github.com/bmatcuk/doublestar",
+			"repository": "https://github.com/cloudfoundry/bosh-utils",
+			"vcs": "git",
+			"revision": "833257efc00aee289992e3c49551121850208c36",
+			"branch": "master",
+			"path": "vendor/github.com/bmatcuk/doublestar",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cloudfoundry/bosh-utils/vendor/github.com/charlievieth/fs",
+			"repository": "https://github.com/cloudfoundry/bosh-utils",
+			"vcs": "git",
+			"revision": "833257efc00aee289992e3c49551121850208c36",
+			"branch": "master",
+			"path": "vendor/github.com/charlievieth/fs",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cloudfoundry/bosh-utils/vendor/github.com/nu7hatch/gouuid",
+			"repository": "https://github.com/cloudfoundry/bosh-utils",
+			"vcs": "git",
+			"revision": "833257efc00aee289992e3c49551121850208c36",
+			"branch": "master",
+			"path": "vendor/github.com/nu7hatch/gouuid",
+			"notests": true
+		},
+		{
+			"importpath": "github.com/cloudfoundry/bosh-utils/vendor/golang.org/x/net/proxy",
+			"repository": "https://github.com/cloudfoundry/bosh-utils",
+			"vcs": "git",
+			"revision": "833257efc00aee289992e3c49551121850208c36",
+			"branch": "master",
+			"path": "vendor/golang.org/x/net/proxy",
+			"notests": true
+		},
+		{
+			"importpath": "golang.org/x/sys/unix",
+			"repository": "https://go.googlesource.com/sys",
+			"vcs": "git",
+			"revision": "dbc2be9168a660ef302e04b6ff6406de6f967473",
+			"branch": "master",
+			"path": "/unix",
+			"notests": true
+		},
+		{
+			"importpath": "gopkg.in/yaml.v2",
+			"repository": "https://gopkg.in/yaml.v2",
+			"vcs": "git",
+			"revision": "cd8b52f8269e0feb286dfeef29f8fe4d5b397e0b",
+			"branch": "v2",
+			"notests": true
+		}
+	]
+}
