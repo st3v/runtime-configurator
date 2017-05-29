@@ -4,6 +4,7 @@ import boshdir "github.com/cloudfoundry/bosh-cli/director"
 
 type Deployment interface {
 	Update(bool, Infoer) error
+	Name() string
 }
 
 type Director interface {
@@ -34,9 +35,9 @@ func New(director Director, dryRun bool, info Infoer) *deployer {
 	}
 }
 
-func (d *deployer) DeployAll() error {
-	d.log.Info("deployer", "Deploying all existing deployments ...")
-	defer d.log.Info("deployer", "Done deploying all existing deployments")
+func (d *deployer) DeployAllBut(skip []string) error {
+	d.log.Info("deployer", "Deploying existing deployments ...")
+	defer d.log.Info("deployer", "Done deploying existing deployments")
 
 	deps, err := d.dir.Deployments()
 	if err != nil {
@@ -44,13 +45,23 @@ func (d *deployer) DeployAll() error {
 	}
 
 	for _, dep := range deps {
+		if contains(skip, dep.Name()) {
+			// skip deployment
+			d.log.Info("deployer", "Skipping deployment %q ...", dep.Name())
+			continue
+		}
+
 		if err := dep.Update(d.dry, d.log); err != nil {
-			// skip on first error
+			// break on first error
 			return err
 		}
 	}
 
 	return nil
+}
+
+func (d *deployer) DeployAll() error {
+	return d.DeployAllBut([]string{})
 }
 
 func (d *deployer) Deploy(name string) error {
@@ -63,4 +74,13 @@ func (d *deployer) Deploy(name string) error {
 	}
 
 	return dep.Update(d.dry, d.log)
+}
+
+func contains(haystack []string, needle string) bool {
+	for _, item := range haystack {
+		if item == needle {
+			return true
+		}
+	}
+	return false
 }

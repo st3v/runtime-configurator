@@ -7,8 +7,8 @@ type deployment struct {
 }
 
 func (d *deployment) Update(dryRun bool, log Infoer) error {
-	log.Info("deployement", "Updating %q (dryRun: %t) ...", d.dep.Name(), dryRun)
-	defer log.Info("deployement", "Done updating %q", d.dep.Name())
+	log.Info("deployment", "Updating %q (dryRun: %t) ...", d.dep.Name(), dryRun)
+	defer log.Info("deployment", "Done updating %q", d.dep.Name())
 
 	mf, err := d.dep.Manifest()
 	if err != nil {
@@ -21,4 +21,8 @@ func (d *deployment) Update(dryRun bool, log Infoer) error {
 	}
 
 	return d.dep.Update([]byte(mf), boshdir.UpdateOpts{DryRun: dryRun})
+}
+
+func (d *deployment) Name() string {
+	return d.dep.Name()
 }

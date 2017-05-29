@@ -7,6 +7,7 @@ import (
 	"net/url"
 	"os"
 	"strconv"
+	"strings"
 
 	"github.com/st3v/runtime-configurator/bosh"
 	"github.com/st3v/runtime-configurator/configurator"
@@ -28,7 +29,21 @@ var (
 	removeManifest    string
 	deploy            bool
 	deployDryRun      bool
+	deploySkip        deployments
 )
+
+type deployments []string
+
+func (d *deployments) String() string {
+	return strings.Join(*d, ", ")
+}
+
+func (d *deployments) Set(v string) error {
+	for _, dep := range strings.Split(v, ",") {
+		*d = append(*d, dep)
+	}
+	return nil
+}
 
 func init() {
 	log.SetFlags(0)
@@ -124,6 +139,12 @@ func init() {
 		"Deploy dry-run for existing deployments [RUNTIME_CONFIG_DEPLOY_DRY_RUN]",
 	)
 
+	flag.Var(
+		&deploySkip,
+		"runtime-config.deploy.skip",
+		"Comma-separated list of deployment names that should be skipped during deploy operation [RUNTIME_CONFIG_DEPLOY_SKIP]",
+	)
+
 	flag.StringVar(
 		&boshLogLevel,
 		"bosh.log-level",
@@ -134,6 +155,10 @@ func init() {
 
 func main() {
 	flag.Parse()
+
+	if len(deploySkip) == 0 {
+		flag.Set("runtime-config.deploy.skip", getEnvString("RUNTIME_CONFIG_DEPLOY_SKIP", ""))
+	}
 
 	if addManifest == "" && removeManifest == "" {
 		flag.Usage()
@@ -189,8 +214,8 @@ func main() {
 
 	if deploy || deployDryRun {
 		dep := deployer.New(director, deployDryRun, logger)
-		if err := dep.DeployAll(); err != nil {
-			log.Fatalf("Error re-deploying deployments: %v", err)
+		if err := dep.DeployAllBut(deploySkip); err != nil {
+			log.Fatalf("Error deploying deployments: %v", err)
 		}
 	}
 }
